@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:cmn="http://NamespaceTest.com/CommonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetnamespace="http://NamespaceTest.com/OrderTypes" elementformdefault="qualified">
+    <xs:complextype name="OrderType">
+        <xs:sequence>
+            <xs:element name="Item" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complextype>
+    <xs:import schemalocation="CommonTypes.xsd" namespace="http://NamespaceTest.com/CommonTypes"></xs:import>
+</xs:schema>

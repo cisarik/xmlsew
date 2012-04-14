@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+@font-face {
+font-family: 'Droid Sans';
+font-style: normal;
+font-weight: normal;
+src: local('Droid Sans'), local('DroidSans'), url('../fonts/DroidSans.ttf') format('truetype');
+}
+
+body {
+background: black url(../gif/ide.gif)
+}
+
+div#xmlsew {overflow:hidden;font-family: 'Droid Sans';z-index:5;margin: 0 0 0 0;padding: 0 0 0 0;background-color: black; }
+div#xmlsew_navigationbar{ float:top;left:0px;top:0px;position:fixed;z-index:6;width:100%;height:23px;display: none;background-color: black; }
+div.xmlsew_navigationbutton{ float:left;height:23px; }
+div#xmlsew_ajaxloader{ width:120px;height:22px;float:right;padding-right: 10px;padding-top: 6px;float:right; }
+div#xmlsew_screen { margin:0 0 0 0;padding:0 0 0 0;left:0px;top:0px;display:block;background: black url(../gif/ide.gif);width:100%; }
+
+div#linksbar {
+float:left;
+margin-left: 6px;
+margin-right: 6px;
+}
+
+div#linksbar a {
+font-size: 13px;
+color:black;
+text-decoration: none;
+
+}
+
+div#linksbar a:hover {
+font-size: 13px;
+color:white;
+text-decoration: none;
+background-color: grey;
+}
+
+div#gradbar {
+background-image: url('../png/grad.png'); 
+background-repeat:repeat-x;
+width:100%;
+height:10px;
+}
+
+.navigationbutton .left {
+background-image: url('./images/panel2-left_hover.png'); 
+width:5px;
+height:23px;
+float:left;
+}
+
+.navigationbutton .middle {
+background-color: black;
+height:23px;
+padding-left: 3px;
+padding-right: 3px;
+float:left;
+}
+
+.navigationbutton .right {
+background-image: url('../png/panel_right.png'); 
+width:5px;
+height:23px;
+float:right;
+}
+
+.navigationbutton .middle a {
+font-size: 15px;
+color:white;
+text-decoration: none;
+}
+
+.navigationbutton .middle a:hover {
+font-size: 15px;
+color:white;
+text-decoration: none;
+background-color: grey;
+}
+
+img {
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+border: none;
+}     
+
+.blueBordered {
+border-style:solid;
+border-color:#0088cc;
+border-width:1px;
+margin-left:-2px;
+margin-top:-2px;
+}
+
+.sewElement {
+margin-left:30px;
+}
+  
+.sewElementTitle {
+background:grey;
+font-weight:bold;
+color:white;
+border-style:solid;
+border-color:black;
+border-width:1px;
+cursor: default;
+}
+
+.sewElementContent {
+background:white;
+padding-top:21px;
+}
+  
+div.sewEditor {
+width:50%;
+float:left;
+margin-bottom:290px;
+}
+
+div.sewCode {
+width:48%;
+float:right;
+background:white;
+border-style:solid;
+border-color:black;
+border-width:3px;
+margin-right:8px;
+}
+
+a.nav-a {
+color:black;
+font-weight:bold;
+}

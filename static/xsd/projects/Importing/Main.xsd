@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:ord="http://NamespaceTest.com/OrderTypes" xmlns:pur="http://NamespaceTest.com/Purchase" xmlns:cmn="http://NamespaceTest.com/CommonTypes" xmlns:cust="http://NamespaceTest.com/CustomerTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetnamespace="http://NamespaceTest.com/Purchase" elementformdefault="qualified">
+    <xs:element name="Purchase">
+        <xs:complextype>
+            <xs:sequence>
+                <xs:element name="OrderDetail" type="O"></xs:element>
+                <xs:element name="PaymentMethod" type="cmn:PaymentMethodType"></xs:element>
+                <xs:element></xs:element>
+            </xs:sequence>
+        </xs:complextype>
+    </xs:element>
+    <xs:element name="CustomerDetails" type=""></xs:element>
+    <xs:import schemalocation="CommonTypes.xsd" namespace="http://NamespaceTest.com/CommonTypes"></xs:import>
+    <xs:import schemalocation="CustomerTypes.xsd" namespace="http://NamespaceTest.com/CustomerTypes"></xs:import>
+    <xs:import schemalocation="OrderTypes.xsd" namespace="http://NamespaceTest.com/OrderTypes"></xs:import>
+</xs:schema>
