@@ -1,6 +1,11 @@
 /*
-XMLSchemaEditorWidget jquery plugin
-v2.0 | 31.3.2012
+File: static/js/jquery/jquery-xmlsew.js
+
+Official site:
+-<http://xmlsew.cisary.com/>
+
+Author:
+-cisary@me.com>
 */
 
 (function($) { 

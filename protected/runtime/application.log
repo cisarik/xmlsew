@@ -1,0 +1,618 @@
+2012/04/17 00:03:10 [error] [php] Missing argument 2 for CHtml::ajaxSubmitButton(), called in /Applications/MAMP/htdocs/xmlsewyii/protected/views/site/login.php on line 45 and defined (/Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php:1004)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): SiteController->renderInternal()
+#1 /Applications/MAMP/htdocs/yii/framework/web/CController.php(870): SiteController->renderFile()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#3 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(92): SiteController->render()
+#4 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#9 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#10 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/index.php?r=site/login
+in /Applications/MAMP/htdocs/xmlsewyii/protected/views/site/login.php (45)
+in /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php (92)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/17 00:15:39 [error] [php] require(logged) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/Applications/MAMP/htdocs/yii/framework/web/CBaseController.php:131)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#1 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/index.php?r=site/login
+in /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php (89)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/17 00:16:19 [error] [php] require(login) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/Applications/MAMP/htdocs/yii/framework/web/CBaseController.php:131)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#1 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/index.php?r=site/login
+in /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php (89)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/17 00:17:34 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.name" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(2145): CComponent->__get('name')
+#1 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(1875): CHtml::resolveValue(Object(LoginForm), 'name')
+#2 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(LoginForm), 'name', Array)
+#3 /Applications/MAMP/htdocs/yii/framework/web/widgets/CActiveForm.php(655): CHtml::activeTextField(Object(LoginForm), 'name', Array)
+#4 /Applications/MAMP/htdocs/xmlsewyii/protected/views/site/contact.php(38): CActiveForm->textField(Object(LoginForm), 'name')
+#5 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/M...')
+#6 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/M...', Array, true)
+#7 /Applications/MAMP/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/M...', Array, true)
+#8 /Applications/MAMP/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('contact', Array, true)
+#9 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(89): CController->render('contact', Array)
+#10 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#11 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#15 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#16 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=site/login
+HTTP_REFERER=http://localhost/xmlsewyii/index.php?r=site/login
+---
+2012/04/17 00:21:07 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.name" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(2145): CComponent->__get('name')
+#1 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(1875): CHtml::resolveValue(Object(LoginForm), 'name')
+#2 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(LoginForm), 'name', Array)
+#3 /Applications/MAMP/htdocs/yii/framework/web/widgets/CActiveForm.php(655): CHtml::activeTextField(Object(LoginForm), 'name', Array)
+#4 /Applications/MAMP/htdocs/xmlsewyii/protected/views/site/contact.php(38): CActiveForm->textField(Object(LoginForm), 'name')
+#5 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/M...')
+#6 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/M...', Array, true)
+#7 /Applications/MAMP/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/M...', Array, true)
+#8 /Applications/MAMP/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('contact', Array, true)
+#9 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(89): CController->render('contact', Array)
+#10 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#11 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#15 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#16 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=site/login
+HTTP_REFERER=http://localhost/xmlsewyii/index.php?r=site/login
+---
+2012/04/17 00:21:23 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.name" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(2145): CComponent->__get('name')
+#1 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(1875): CHtml::resolveValue(Object(LoginForm), 'name')
+#2 /Applications/MAMP/htdocs/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(LoginForm), 'name', Array)
+#3 /Applications/MAMP/htdocs/yii/framework/web/widgets/CActiveForm.php(655): CHtml::activeTextField(Object(LoginForm), 'name', Array)
+#4 /Applications/MAMP/htdocs/xmlsewyii/protected/views/site/contact.php(38): CActiveForm->textField(Object(LoginForm), 'name')
+#5 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/M...')
+#6 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/M...', Array, true)
+#7 /Applications/MAMP/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/M...', Array, true)
+#8 /Applications/MAMP/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('contact', Array, true)
+#9 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(89): CController->render('contact', Array)
+#10 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#11 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#15 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#16 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=site/login
+HTTP_REFERER=http://localhost/xmlsewyii/index.php?r=site/login
+---
+2012/04/17 15:02:05 [error] [exception.CException] exception 'CException' with message 'Element and its behaviors do not have a method or closure named "toJSON".' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/ar/CActiveRecord.php(226): CComponent->__call('toJSON', Array)
+#1 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(33): CActiveRecord->__call('toJSON', Array)
+#2 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(33): Element->toJSON()
+#3 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('')
+#8 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/xmlsewyii/
+---
+2012/04/17 15:04:07 [error] [php] Use of undefined constant name - assumed 'name' (/Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php:35)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#1 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/
+in /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php (35)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/17 15:04:38 [error] [php] Use of undefined constant name - assumed 'name' (/Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php:35)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#1 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/
+in /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php (35)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/17 15:14:39 [error] [php] include(Childrenlements.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/MAMP/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(40): spl_autoload_call()
+#1 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/
+in /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php (40)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/17 15:19:54 [error] [exception.CException] exception 'CException' with message 'Property "Elementchildren.id_element_children" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('id_element_chil...')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CModel.php(593): CActiveRecord->__get('id_element_chil...')
+#2 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(43): CModel->offsetGet('id_element_chil...')
+#3 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('')
+#8 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/xmlsewyii/
+---
+2012/04/17 16:24:00 [error] [php] Undefined index: id_attributedefaultvalue (/Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php:78)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#1 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/
+in /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php (78)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/17 16:25:40 [error] [php] Undefined variable: attribute (/Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php:83)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#1 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/
+in /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php (83)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/17 17:45:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "elementattributedefaultvalues".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('elementattribut...')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=elementattributedefaultvalues
+---
+2012/04/17 23:41:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/login".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/login')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/login
+---
+2012/04/17 23:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/index".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/index')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/index
+---
+2012/04/17 23:42:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/login".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/login')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/login
+---
+2012/04/17 23:46:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/index".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/index')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/index
+---
+2012/04/17 23:47:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/site/index".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/site/i...')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/site/index
+---
+2012/04/17 23:51:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/login".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/login')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/login
+---
+2012/04/17 23:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/login.php".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/login....')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/login.php
+---
+2012/04/17 23:51:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/index".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/index')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/index
+---
+2012/04/17 23:52:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajaxAuth/index".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('ajaxAuth/index')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/index
+---
+2012/04/17 23:55:34 [error] [php] Use of undefined constant login - assumed 'login' (/Applications/MAMP/htdocs/xmlsewyii/protected/modules/ajaxAuth/views/default/login.php:5)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(870): DefaultController->renderFile()
+#1 /Applications/MAMP/htdocs/xmlsewyii/protected/modules/ajaxAuth/controllers/DefaultController.php(7): DefaultController->renderPartial()
+#2 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): DefaultController->actionLogin()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): DefaultController->runAction()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): DefaultController->runActionWithFilters()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): DefaultController->run()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsewyii/index.php?r=ajaxAuth/default/login
+in /Applications/MAMP/htdocs/xmlsewyii/protected/modules/ajaxAuth/views/default/login.php (5)
+in /Applications/MAMP/htdocs/xmlsewyii/protected/modules/ajaxAuth/controllers/DefaultController.php (7)
+in /Applications/MAMP/htdocs/xmlsewyii/index.php (13)
+2012/04/18 00:58:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('login')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=login
+---
+2012/04/18 00:59:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('login')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=login
+---
+2012/04/18 01:07:12 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "getHash".' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(101): CComponent->__call('getHash', Array)
+#1 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(101): SiteController->getHash('msz9')
+#2 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('')
+#7 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#8 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/xmlsewyii/index.php
+---
+2012/04/18 01:23:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'xmlsew.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in /Applications/MAMP/htdocs/xmlsewyii/protected/models/User.php (9)
+in /Applications/MAMP/htdocs/xmlsewyii/protected/components/UserIdentity.php (15)
+in /Applications/MAMP/htdocs/xmlsewyii/protected/models/LoginForm.php (51)
+2012/04/18 01:23:29 [error] [exception.CDbException] exception 'CDbException' with message 'The table "user" for active record class "User" cannot be found in the database.' in /Applications/MAMP/htdocs/yii/framework/db/ar/CActiveRecord.php:2268
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/ar/CActiveRecord.php(383): CActiveRecordMetaData->__construct(Object(User))
+#1 /Applications/MAMP/htdocs/xmlsewyii/protected/models/User.php(9): CActiveRecord::model('User')
+#2 /Applications/MAMP/htdocs/xmlsewyii/protected/components/UserIdentity.php(15): User::model()
+#3 /Applications/MAMP/htdocs/xmlsewyii/protected/models/LoginForm.php(51): UserIdentity->authenticate()
+#4 /Applications/MAMP/htdocs/yii/framework/validators/CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 /Applications/MAMP/htdocs/yii/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 /Applications/MAMP/htdocs/yii/framework/base/CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 /Applications/MAMP/htdocs/xmlsewyii/protected/controllers/SiteController.php(164): CModel->validate()
+#8 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#9 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#13 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=site/login
+HTTP_REFERER=http://localhost/xmlsewyii/index.php?r=site/login
+---
+2012/04/18 11:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('admin')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/index.php?r=admin
+---
+2012/04/18 11:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "auth".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('auth')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/admin.php?r=auth
+---
+2012/04/18 11:28:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "authtest".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('authtest')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/admin.php?r=authtest
+---
+2012/04/18 11:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "authtest".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('authtest')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/admin.php?r=authtest
+---
+2012/04/18 11:28:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "authtest".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('authtest')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsewyii/admin.php?r=authtest
+---
+2012/04/18 11:29:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "message".' in /Applications/MAMP/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(271): CController->missingAction('message')
+#1 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('message')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('authtest/messag...')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/xmlsewyii/admin.php?r=authtest/message
+---
+2012/04/18 11:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /Applications/MAMP/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(271): CController->missingAction('test')
+#1 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('test')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('authtest/test')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/xmlsewyii/admin.php?r=authtest/test
+---
+2012/04/18 11:32:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/yii/framework/web/auth/CAccessControlFilter.php:168
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/auth/CAccessControlFilter.php(131): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('adminonly')
+#8 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('authtest/admino...')
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/xmlsewyii/admin.php?r=authtest/adminonly
+---
+2012/04/18 11:34:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/yii/framework/web/auth/CAccessControlFilter.php:168
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/auth/CAccessControlFilter.php(131): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('adminonly')
+#8 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('authtest/admino...')
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/xmlsewyii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/xmlsewyii/admin.php?r=authtest/adminonly
+---
+2012/04/18 12:45:53 [error] [exception.CException] exception 'CException' with message 'Property "WebUser._model" is not defined.' in /Applications/MAMP/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/auth/CWebUser.php(141): CComponent->__get('_model')
+#1 /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php(36): CWebUser->__get('_model')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/M...', Array, true)
+#4 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Applications/M...', Array, true)
+#5 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(207): COutputProcessor->run()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php(21): CBaseController->endContent()
+#10 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/M...', Array, true)
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(785): CBaseController->renderFile('/Applications/M...', Array, true)
+#13 /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php(140): CController->render('admin', Array)
+#14 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): UserController->actionIndex()
+#15 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#18 /Applications/MAMP/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 /Applications/MAMP/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 /Applications/MAMP/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#22 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('')
+#24 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user')
+#25 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#26 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/xmlsew/admin.php?r=user
+HTTP_REFERER=http://localhost/xmlsew/admin.php
+---
+2012/04/18 12:46:07 [error] [php] Object of class User could not be converted to string (/Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php:36)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(77): UserController->renderFile()
+#1 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate()
+#2 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(207): CContentDecorator->run()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(301): UserController->endWidget()
+#5 /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php(21): UserController->endContent()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): UserController->renderInternal()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CController.php(785): UserController->renderFile()
+#9 /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php(140): UserController->render()
+#10 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): UserController->actionIndex()
+#11 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(134): UserController->runAction()
+#13 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Applications/MAMP/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /Applications/MAMP/htdocs/yii/framework/web/filters/CInlineFilter.php(59): UserController->filterAccessControl()
+#16 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /Applications/MAMP/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): UserController->runActionWithFilters()
+#19 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): UserController->run()
+#20 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsew/admin.php?r=user
+in /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php (36)
+in /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php (21)
+in /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php (140)
+2012/04/18 12:46:25 [error] [php] Object of class User could not be converted to string (/Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php:36)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(77): UserController->renderFile()
+#1 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate()
+#2 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(207): CContentDecorator->run()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(301): UserController->endWidget()
+#5 /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php(21): UserController->endContent()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): UserController->renderInternal()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CController.php(785): UserController->renderFile()
+#9 /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php(140): UserController->render()
+#10 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): UserController->actionIndex()
+#11 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(134): UserController->runAction()
+#13 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Applications/MAMP/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /Applications/MAMP/htdocs/yii/framework/web/filters/CInlineFilter.php(59): UserController->filterAccessControl()
+#16 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /Applications/MAMP/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): UserController->runActionWithFilters()
+#19 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): UserController->run()
+#20 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsew/admin.php?r=user
+in /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php (36)
+in /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php (21)
+in /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php (140)
+2012/04/18 12:46:30 [error] [php] Object of class User could not be converted to string (/Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php:36)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(77): UserController->renderFile()
+#1 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate()
+#2 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(207): CContentDecorator->run()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(301): UserController->endWidget()
+#5 /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php(21): UserController->endContent()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): UserController->renderInternal()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CController.php(785): UserController->renderFile()
+#9 /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php(140): UserController->render()
+#10 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): UserController->actionIndex()
+#11 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(134): UserController->runAction()
+#13 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Applications/MAMP/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /Applications/MAMP/htdocs/yii/framework/web/filters/CInlineFilter.php(59): UserController->filterAccessControl()
+#16 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /Applications/MAMP/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): UserController->runActionWithFilters()
+#19 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): UserController->run()
+#20 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsew/admin.php?r=user
+in /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php (36)
+in /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php (21)
+in /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php (140)
+2012/04/18 12:49:59 [error] [php] Object of class Role could not be converted to string (/Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php:36)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(77): UserController->renderFile()
+#1 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate()
+#2 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(207): CContentDecorator->run()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(301): UserController->endWidget()
+#5 /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php(21): UserController->endContent()
+#6 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(127): require()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(96): UserController->renderInternal()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CController.php(785): UserController->renderFile()
+#9 /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php(140): UserController->render()
+#10 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(50): UserController->actionIndex()
+#11 /Applications/MAMP/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(134): UserController->runAction()
+#13 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Applications/MAMP/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /Applications/MAMP/htdocs/yii/framework/web/filters/CInlineFilter.php(59): UserController->filterAccessControl()
+#16 /Applications/MAMP/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /Applications/MAMP/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): UserController->runActionWithFilters()
+#19 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): UserController->run()
+#20 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsew/admin.php?r=user
+in /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/main.php (36)
+in /Applications/MAMP/htdocs/xmlsew/protected/views/layouts/column2.php (21)
+in /Applications/MAMP/htdocs/xmlsew/protected/controllers/UserController.php (140)
+2012/04/18 13:13:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "elementchildren".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('elementchildren')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsew/admin.php?r=elementchildren
+HTTP_REFERER=http://localhost/xmlsew/admin.php?r=site/login
+---
+2012/04/18 13:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "element".' in /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('element')
+#1 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/xmlsew/admin.php?r=element
+HTTP_REFERER=http://localhost/xmlsew/admin.php?r=elementchildren
+---
