@@ -53,7 +53,7 @@ class LoginForm extends CFormModel
                 switch($this->_identity->errorCode)
                 {
                 case UserIdentity::ERROR_USERNAME_INVALID:
-                        $this->addError('username','Invalid email.'); break;
+                        $this->addError('username','Invalid username.'); break;
                 case UserIdentity::ERROR_PASSWORD_INVALID:
                         $this->addError('password','Invalid password.'); break;
                 case UserIdentity::ERROR_STATUS_BANNED:

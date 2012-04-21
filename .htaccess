@@ -1,2 +1,1 @@
-deny from all
 php_value magic_quotes_gpc off

@@ -22,7 +22,7 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<a href="/"><img style="float:left;" src="static/png/logoblueblack.png"></a>
+		<a href="index.php"><img style="float:left;" src="static/png/logoblueblack.png"></a>
 	</div><!-- header -->
 
 	<div id="mainmenu">
@@ -30,10 +30,11 @@
 
 				$this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
-					array('label'=>'Administration', 'url'=>array('/site/index'),'visible'=>!(Yii::app()->user->getModel()->role['name']=='administrator')),
+					array('label'=>'Administration', 'url'=>array('/site/admin'),'visible'=>!(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about'),'visible'=>!(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'Contact', 'url'=>array('/site/contact'),'visible'=>!(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'Users', 'url'=>array('/user'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
+					array('label'=>'Invitation', 'url'=>array('/site/invite'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'Roles', 'url'=>array('/role'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'Elements', 'url'=>array('/element'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'Children Elements', 'url'=>array('/elementchildren'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),

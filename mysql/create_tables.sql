@@ -81,3 +81,23 @@ FOREIGN KEY (`id_role`) REFERENCES xmlsew_role(`id`)
 INSERT INTO `xmlsew_user` (`id_role`, `email`, `password`, `name`, `member_since`, `status`)
 VALUES (1, 'cisary@me.com', 'e4272454604ca610bf38fd067ff5408698463004', 'admin', '1999-01-23', 'active'),
 (2, 'a@b.com', 'e4272454604ca610bf38fd067ff5408698463004', 'user', '2010-09-05', 'active');
+
+CREATE TABLE `xmlsew_forgottenpasswordkeychain` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`id_user` INT NOT NULL,
+`keychain` VARCHAR(64) NOT NULL,
+PRIMARY KEY (`id`),
+FOREIGN KEY (`id_user`) REFERENCES xmlsew_user(`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+CREATE TABLE `xmlsew_invitationkeychain` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`id_user` INT NOT NULL,
+`keychain` VARCHAR(64) NOT NULL,
+PRIMARY KEY (`id`),
+FOREIGN KEY (`id_user`) REFERENCES xmlsew_user(`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+INSERT INTO `xmlsew_user` (`id_role`, `email`, `password`, `name`, `member_since`, `status`)
+VALUES (2, 'cisary@gmail.com', '', '', '', 'blocked');
+

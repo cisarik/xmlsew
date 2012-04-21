@@ -23,6 +23,114 @@ class SiteController extends Controller
 			),
 		);
 	}
+	
+	public function actionChangepassword()
+	{
+		if(isset($_POST['ajaxrequest']))
+		{
+			$model=new NewpasswordForm;
+			$model->attributes=$_POST['NewpasswordForm'];
+			if($model->validate() && $model->passwordchanged()) {
+				$response=array();
+				$response['status']='OK';
+		
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			} else {
+				$response=array();
+				$response['status']='ERROR';
+				
+				$errors=$model->getErrors();
+				$message="<p>";
+				foreach ( $errors as $attribute => $error) {
+					$message.=$error[0]."<br>";
+				}
+				$message.="</p>";
+				$response['message']=$message;
+		
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			}
+			
+		}
+		$action='showChangePassword();';
+		$this->renderPartial('main',array('action'=> $action),false, true);
+	}
+	
+	public function actionNewpassword()
+	{
+		if(isset($_POST['ajaxrequest']))
+		{
+			$model=new NewpasswordForm;
+			$model->attributes=$_POST['NewpasswordForm'];
+			if($model->validate() && $model->setnewpassword($_POST['keychain'])) {
+				$response=array();
+				
+				
+				$response['status']='OK';
+		
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			} else {
+				$response=array();
+				$response['status']='ERROR';
+				
+				$errors=$model->getErrors();
+				$message="<p>";
+				foreach ( $errors as $attribute => $error) {
+					$message.=$error[0]."<br>";
+				}
+				$message.="</p>";
+				$response['message']=$message;
+		
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			}
+		}
+		$key=Yii::app()->request->getQuery('keychain');
+		$action='showNewPassword(\"'.$key.'\");';
+		$this->renderPartial('main',array('action'=> $action),false, true);
+	}
+	
+	public function actionForgottenpassword()
+	{
+		if(isset($_POST['ajaxrequest']))
+		{
+			$model=new ForgottenpasswordForm;
+			$model->attributes=$_POST['ForgottenpasswordForm'];
+			
+			if($model->validate() && $model->sent()) {
+				$response=array();
+				$response['status']='OK';
+		
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			} else {
+				$response=array();
+				$response['status']='ERROR';
+				
+				$errors=$model->getErrors();
+				$message="<p>";
+				foreach ( $errors as $attribute => $error) {
+					$message.=$error[0]."<br>";
+				}
+				$message.="</p>";
+				$response['message']=$message;
+		
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			}
+		}
+		
+		$this->renderPartial('main',array('action'=> 'showForgottenPassword();'),false, true);
+		
+	}
 
 	/**
 	 * This is the default 'index' action that is invoked
@@ -30,7 +138,19 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		
+		$action="";
+		if ((Yii::app()->user->getModel()->role['name']==='user') || (Yii::app()->user->getModel()->role['name']==='administrator')) {
+			$action="$('body').xmlsew();";
+		}
+		else
+			$action="showLogin();";
+			
 	
+		$this->renderPartial('main',array('action'=> $action),false, true);
+		
+		//$this->render('index');
+		Yii::app()->end();
 		
 		$elements=Element::model()->findAll();
 		$allelements=array();
@@ -107,6 +227,11 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
+	
+	public function actionAdmin()
+	{
+		$this->render('index');
+	}
 
 	/**
 	 * This is the action to handle external exceptions.
@@ -141,6 +266,61 @@ class SiteController extends Controller
 		}
 		$this->render('contact',array('model'=>$model));
 	}
+	
+	public function actionInvite()
+	{
+		$model=new InviteForm;
+		if(isset($_POST['InviteForm']))
+		{
+			$model->attributes=$_POST['InviteForm'];
+			if($model->validate() && $model->checkemails() && $model->sent())
+			{
+				//$headers="From: {$model->email}\r\nReply-To: {$model->email}";
+				//mail(Yii::app()->params['adminEmail'],$model->subject,$model->body,$headers);
+				Yii::app()->user->setFlash('invite','Invitations sent!');
+				$this->refresh();
+			}
+		}
+		$this->render('invite',array('model'=>$model));
+	}
+	
+	public function actionNewaccount()
+	{
+		$model=new NewaccountForm;
+		if(isset($_POST['NewaccountForm']))
+		{
+			$model->attributes=$_POST['NewaccountForm'];
+			if($model->validate() && $model->created($_POST['keychain']))
+			{
+				$response=array();
+				$response['status']='OK';
+		
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			} else {
+				$response=array();
+				$response['status']='ERROR';
+				
+				$errors=$model->getErrors();
+				$message="<p>";
+				foreach ( $errors as $attribute => $error) {
+					$message.=$error[0]."<br>";
+				}
+				$message.="</p>";
+				$response['message']=$message;
+		
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			}
+			
+		}
+		$key=Yii::app()->request->getQuery('keychain');
+		$action='showNewAccount(\"'.$key.'\");';
+		$this->renderPartial('main',array('action'=> $action),false, true);
+	}
+	
 
 	/**
 	 * Displays the login page
@@ -150,10 +330,35 @@ class SiteController extends Controller
 		$model=new LoginForm;
 
 		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		if(isset($_POST['ajaxlogin']))
 		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
+			$model->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($model->validate() && $model->login()) {
+				$response=array();
+				$response['status']='OK';
+				
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			}
+			else {
+				$response=array();
+				$response['status']='ERROR';
+				
+				$errors=$model->getErrors();
+				$message="<p>";
+				foreach ( $errors as $attribute => $error) {
+					$message.=$error[0]."<br>";
+				}
+				$message.="</p>";
+				$response['message']=$message;
+				
+				$response=CJavaScript::jsonEncode($response);
+				$this->renderPartial('json',array('json'=>$response), false, true);
+				Yii::app()->end();
+			}
+		
 		}
 
 		// collect user input data
@@ -162,7 +367,9 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login()) {
-				$this->renderPartial('logged');
+				
+				//$this->render('login',array('model'=>$model));
+				$this->redirect(Yii::app()->user->returnUrl);
 				Yii::app()->end();
 				}
 		}

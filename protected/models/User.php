@@ -67,7 +67,7 @@ class User extends CActiveRecord
 		));
 	}
 	
-	protected function getHash($password)
+	public function getHash($password)
 	{
 		return md5("this is salt string for xmlsew" . $password);
 	}
