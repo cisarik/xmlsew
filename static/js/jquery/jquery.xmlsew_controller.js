@@ -348,18 +348,18 @@ XMLsew('XMLSchemaEditorWidget.Controller.UI',
 		})	
 	},
 	
-	loadElements:function(){
+	loadModel:function(){
 		// fetch models - element classes from json file
 		
-		//index.php?r=xmlsew/model/elements
-		
-		//static/json/model.XMLSchemaElement.json
-		
-		new XMLSchemaEditorWidget.Controller.Ajax().getJSON('static/json/model.XMLSchemaElement.json',
+		new XMLSchemaEditorWidget.Controller.Ajax().getJSON('index.php?r=model/get',
 			function(data){
 			
+				var response=$.parseJSON(data['responseText'])
+				
+				XMLSchemaEditorWidget.Model.Datatypes.defaults=response['defaultvalues']
+			
 				// parsing response json to javascript Object - dictionary with element models
-				XMLSchemaEditorWidget.Model.XMLSchemaElement.parsedJSON=$.parseJSON(data['responseText'])
+				XMLSchemaEditorWidget.Model.XMLSchemaElement.parsedJSON=response['elements']
 				
 				$.each(XMLSchemaEditorWidget.Model.XMLSchemaElement.parsedJSON, function(key, val) {
 					//console.log(key+':'+val['children'])
@@ -423,7 +423,8 @@ XMLsew('XMLSchemaEditorWidget.Controller.UI',
 		this.xmlsewphp.hide()
 		this.xmlsewphptoggled=true
 		
-		system.loadElements()
+		system.loadModel()
+		
 		var el=$.new$('div').attr('id','xmlsew')
 		element.append(el)
 		

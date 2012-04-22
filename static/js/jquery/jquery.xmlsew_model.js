@@ -11,11 +11,6 @@ Author:
 (function($) { 
 "use strict"
 
-var COMMON_DATATYPES=['xs:string','xs:decimal','xs:boolean','xs:float','xs:double','xs:duration','xs:dateTime','xs:time','xs:date','xs:gYearMonth','xs:gYear',
-	'xs:gMonthDay','xs:gDay','xs:gMonth','xs:hexBinary','xs:base64Binary','xs:anyURI','xs:NOTATION','xs:normalizedString','xs:token','xs:language','xs:NMTOKEN','xs:NMTOKENS',
-	'xs:name','xs:NCName','xs:ID','xs:IDREF','xs:IDREFS','xs:ENTITY','xs:ENTITIES','xs:integer','xs:nonPositiveInteger','xs:negativeInteger','xs:long','xs:unsignedLong',
-	'xs:int','xs:unsignedInt','xs:short','xs:unsignedShort','xs:byte','xs:unsignedByte','xs:nonNegativeInteger','xs:positiveInteger']
-
 $.Class("XMLsew",{
 	setup : function(el){
 		arguments[0] = jQuery(el)
@@ -32,46 +27,7 @@ XMLsew('XMLSchemaEditorWidget.Model',{
 
 XMLSchemaEditorWidget.Model("XMLSchemaEditorWidget.Model.Datatypes",
 {
-	defaults:{
-		'xs\\:schema':{'attributeFormDefault':["qualified","unqualified"],
-			'blockDefault':["extension","restriction","substitution","#all"],
-			'elementFormDefault':["qualified","unqualified"],
-			'finalDefault':["extension","restriction","list","union","#all"]
-		},
-		
-		'xs\\:element':{'type':COMMON_DATATYPES,
-			'block':["extension","restriction","substitution","#all"],
-			'abstract':["true","false"],
-			'final':["extension","restriction","#all"],
-			'form':["qualified","unqualified"],
-			'nillable':["true","false"],
-		},
-		
-		'xs\\:attribute':{'form':["qualified","unqualified"],
-			'use':["optional","prohibited","required"],
-		},
-		
-		'xs\\:simpleType':{'final':["restriction","list","union","#all"]},
-		
-		'xs\\:complexType':{'abstract':["true","false"],
-			'block':["extension","restriction","#all"],
-			'final':["extension","restriction","#all"],
-			'mixed':["true","false"],
-		},
-		
-		'xs\\:any':{'namespace':["##any","##other","##local","##targetNamespace"],
-			'processContents':["strict","lax","skip"],
-		},
-		
-		'xs\\:anyAttribute':{'namespace':["##any","##other","##local","##targetNamespace"],
-			'processContents':["strict","lax","skip"],
-		},
-		
-		'xs\\:restriction':{'base':COMMON_DATATYPES},
-		
-		'xs\\:extension':{'base':COMMON_DATATYPES},
-		
-	}
+	defaults:{}
 },
 {
 	custom:{},

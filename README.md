@@ -1,1 +1,2 @@
-# This is my README
+XML Schema Editor web application
+created by: Michal Cisarik, cisary@me.com

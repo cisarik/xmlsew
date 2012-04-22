@@ -2,15 +2,8 @@
 
 class ModelController extends Controller
 {
-	public function stripslashes_if_gpc_magic_quotes( $string ) {
-	    if(get_magic_quotes_gpc()) {
-	        return stripslashes($string);
-	    } else {
-	        return $string;
-	    }
-	}
 
-	public function actionElements()
+	public function actionGet()
 	{
 		$elements=Element::model()->findAll();
 		$allelements=array();
@@ -18,13 +11,13 @@ class ModelController extends Controller
 		
 		for ($i = 0; $i != sizeof($elements); $i++){
 			$el=array();
-			$el['escapedname']='xs\:'.$elements[$i]['name'];
+			$el['escapedName']='xs\:'.$elements[$i]['name'];
 			
 			$childrenelements=Elementchildren::model()->findAllByAttributes(array('id_element'=>$elements[$i]['id']));
 			$children=array();
 			for ($j = 0; $j != sizeof($childrenelements); $j++){
 				$childrenelement=Element::model()->findByAttributes(array('id'=>$childrenelements[$j]['id_elementchildren']));
-				$children[]='xs\:'.$childrenelement['name'];
+				$children[]='xs\:'.str_replace('_', '',$childrenelement['name']);
 			}
 			$el['children']=$children;
 			
@@ -72,32 +65,56 @@ class ModelController extends Controller
 			}
         }
         
-      // $a=array();
-      // $a[]="xs\\:schema";
+        $data=Yii::app()->request->getQuery('data');
         
-        //$allelements["XMLSchemaEditorWidget.Model.root"]["escapedname"]="root";
+       // Yii::app()->end();
         
-   		//$allelements["XMLSchemaEditorWidget.Model.root"]["children"]='xs\:schema';
+        //if ($data==="elements") {
         
-        $allelements["XMLSchemaEditorWidget.Model.extension"]["escapedname"]="xs\:extension";
-        $allelements["XMLSchemaEditorWidget.Model.extension_simpleContent"]["escapedname"]="";
-        $allelements["XMLSchemaEditorWidget.Model.extension_complexContent"]["escapedname"]="";
-        
-        $allelements["XMLSchemaEditorWidget.Model.restriction"]["escapedname"]="xs\:restriction";
-        $allelements["XMLSchemaEditorWidget.Model.restriction_simpleContent"]["escapedname"]="";
-        $allelements["XMLSchemaEditorWidget.Model.restriction_complexContent"]["escapedname"]="";
-        $allelements["XMLSchemaEditorWidget.Model.restriction_simpleType"]["escapedname"]="";
-        
-        
-        
-        
-        
-        $allelements=json_encode($allelements);
-
-        //$allelements = CJavaScript::jsonEncode($allelements);
-        //$alldefaultvalues = CJavaScript::jsonEncode($alldefaultvalues);
+	        $allelements["XMLSchemaEditorWidget.Model.extension"]["escapedName"]="xs\:extension";
+	        $allelements["XMLSchemaEditorWidget.Model.extension_simpleContent"]["escapedname"]="";
+	        $allelements["XMLSchemaEditorWidget.Model.extension_complexContent"]["escapedname"]="";
+	        
+	        $allelements["XMLSchemaEditorWidget.Model.restriction"]["escapedName"]="xs\:restriction";
+	        $allelements["XMLSchemaEditorWidget.Model.restriction_simpleContent"]["escapedName"]="";
+	        $allelements["XMLSchemaEditorWidget.Model.restriction_complexContent"]["escapedName"]="";
+	        $allelements["XMLSchemaEditorWidget.Model.restriction_simpleType"]["escapedName"]="";
+	        
+	        $allelements["XMLSchemaEditorWidget.Model._length"]["escapedName"]="xs\:length";
+	        $allelements["XMLSchemaEditorWidget.Model._whiteSpace"]["escapedName"]="xs\:whiteSpace";
+	        
+	        //$allelements=json_encode($allelements);
+			
+			//$this->renderPartial('json',array('json'=>$allelements), false, true);
+	//	} else 
+	//	if ($data==="defaultvalues") {
 		
-		$this->renderPartial('json',array('json'=>$allelements), false, true);
+			$attributesvalues=array();
+			
+			$defaultvalues=Elementattributedefaultvalues::model()->findAllByAttributes(array('id_element'=>9,'id_attribute'=>31));
+				
+				$attributevalues=array();
+				for ($j = 0; $j != sizeof($defaultvalues); $j++){
+					$defaultattributevalue=Attributedefaultvalue::model()->findByAttributes(array('id'=>$defaultvalues[$j]['id_attributedefaultvalue']));
+					$attributevalues[]=$defaultattributevalue['name'];
+				}
+				
+			$attributesvalues['base']=$attributevalues;
+				
+			$alldefaultvalues['xs\:restriction']=$attributesvalues;
+			$alldefaultvalues['xs\:extension']=$attributesvalues;
+			
+		
+			//$alldefaultvalues = json_encode($alldefaultvalues);
+			
+			$response=array();
+			$response['defaultvalues']=$alldefaultvalues;
+			$response['elements']=$allelements;
+			$response = json_encode($response);
+			
+			$this->renderPartial('json',array('json'=>$response), false, true);
+	//	}
+		Yii::app()->end();
 	}
 
 	// Uncomment the following methods and override them if needed

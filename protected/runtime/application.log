@@ -2829,3 +2829,79 @@ Stack trace:
 REQUEST_URI=/xmlsew/index.php?r=element
 HTTP_REFERER=http://localhost/xmlsew/index.php?r=role
 ---
+2012/04/22 15:55:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "elements".' in /Applications/MAMP/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(271): CController->missingAction('elements')
+#1 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('elements')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('model/elements')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/xmlsew/index.php?r=model/elements
+HTTP_REFERER=http://localhost/xmlsew/index.php
+---
+2012/04/22 15:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "elements".' in /Applications/MAMP/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(271): CController->missingAction('elements')
+#1 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('elements')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('model/elements')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/xmlsew/index.php?r=model/elements
+HTTP_REFERER=http://localhost/xmlsew/index.php
+---
+2012/04/22 15:57:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "elements".' in /Applications/MAMP/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(271): CController->missingAction('elements')
+#1 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('elements')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('model/elements')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/xmlsew/index.php?r=model/elements
+HTTP_REFERER=http://localhost/xmlsew/index.php
+---
+2012/04/22 15:57:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "elements".' in /Applications/MAMP/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(271): CController->missingAction('elements')
+#1 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('elements')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('model/elements')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/xmlsew/index.php?r=model/elements
+HTTP_REFERER=http://localhost/xmlsew/index.php
+---
+2012/04/22 15:57:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "elements".' in /Applications/MAMP/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(271): CController->missingAction('elements')
+#1 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('elements')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('model/elements')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/xmlsew/index.php?r=model/elements
+HTTP_REFERER=http://localhost/xmlsew/index.php
+---
+2012/04/22 15:57:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "get?data=elements".' in /Applications/MAMP/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(271): CController->missingAction('get?data=elemen...')
+#1 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): CController->run('get?data=elemen...')
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('model/get?data=...')
+#3 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/xmlsew/index.php?r=model/get?data=elements
+---
+2012/04/22 16:14:59 [error] [php] Undefined index: xs\:restriction (/Applications/MAMP/htdocs/xmlsew/protected/controllers/ModelController.php:102)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CController.php(287): ModelController->runAction()
+#1 /Applications/MAMP/htdocs/yii/framework/web/CController.php(266): ModelController->runActionWithFilters()
+#2 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(276): ModelController->run()
+#3 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Applications/MAMP/htdocs/xmlsew/admin.php(13): CWebApplication->run()
+REQUEST_URI=/xmlsew/index.php?r=model/get&data=defaultvalues
+in /Applications/MAMP/htdocs/xmlsew/protected/controllers/ModelController.php (102)
+in /Applications/MAMP/htdocs/xmlsew/admin.php (13)
