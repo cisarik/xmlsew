@@ -63,7 +63,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=xmlsew',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'meteora',
+			'password' => 'Qc86U6qDB24bsgD',
 			'charset' => 'utf8',
 		),
 		
