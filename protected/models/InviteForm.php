@@ -77,7 +77,7 @@ class InviteForm extends CFormModel
 			Yii::app()->db->createCommand($sql)->execute($parameters);
 			
 			
-			$headers="From: cisary@me.com\r\nReply-To: cisary@me.com";
+			$headers="From: webmaster@cisary.com\r\nReply-To: webmaster@cisary.com";
 		
 			$subject='Invitation';
 		
@@ -89,7 +89,7 @@ You have been invited to join xmlsew.cisary.com
 To create your account, please click the following link, or copy and paste it
 into your web browser:
 
-http://localhost/xmlsew/index.php?r=site/newaccount&keychain=$keychain
+https://xmlsew.cisary.com/index.php?r=site/newaccount&keychain=$keychain
 
 Best regards,
 	cisary.com management

@@ -63,7 +63,7 @@ class ForgottenpasswordForm extends CFormModel
 		
 		
 		
-		$headers="From: cisary@me.com\r\nReply-To: cisary@me.com";
+		$headers="From: webmaster@cisary.com\r\nReply-To: webmaster@cisary.com";
 		
 		$subject='Resetting your password';
 		
@@ -76,7 +76,7 @@ wish to reset your password, please ignore this message.
 To reset your password, please click the following link, or copy and paste it
 into your web browser:
 
-http://localhost/xmlsew/index.php?r=site/newpassword&keychain=$keychain
+https://xmlsew.cisary.com/index.php?r=site/newpassword&keychain=$keychain
 
 Your username, in case you've forgotten: $username
 
