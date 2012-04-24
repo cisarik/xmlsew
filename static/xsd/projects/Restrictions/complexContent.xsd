@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema elementformdefault="qualified" targetnamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:complextype name="">
-        <xs:complexcontent>
-            <xs:restriction base=""></xs:restriction>
-        </xs:complexcontent>
-    </xs:complextype>
-</xs:schema>

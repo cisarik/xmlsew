@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetnamespace="urn:examples:schemaseseses">
+<xs:schema targetnamespace="urn:examples:schemaseseses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:simpletype name="Title">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Mr."></xs:enumeration>
@@ -8,15 +8,15 @@
         </xs:restriction>
     </xs:simpletype>
     <xs:simpletype name="Name">
-        <xs:restriction base="">
-            <xs:fractiondigits value="2"></xs:fractiondigits>
+        <xs:restriction base="xs:string">
+            <xs:minlength value="1"></xs:minlength>
         </xs:restriction>
     </xs:simpletype>
     <xs:complextype name="Publication">
         <xs:sequence>
-            <xs:element name="Title" type="Title"></xs:element>
-            <xs:element name="Author" type="Name"></xs:element>
+            <xs:element type="Title" name="Title"></xs:element>
+            <xs:element type="Name" name="Author"></xs:element>
         </xs:sequence>
     </xs:complextype>
-    <xs:element name="Book" type=""></xs:element>
+    <xs:element type="Publication" name="Book"></xs:element>
 </xs:schema>
