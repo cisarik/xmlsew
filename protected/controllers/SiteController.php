@@ -331,7 +331,7 @@ class SiteController extends Controller
 	{
 	        return array(
 	        		array('allow',
-						'actions'=>array('login','newaccount','contact','index','newpassword','forgottenpassword','error','admin','about','page'),
+						'actions'=>array('login','newaccount','contact','index','newpassword','forgottenpassword','error','admin','about','page','captcha'),
 						'users'=>array('*'),
 					),
 	        
