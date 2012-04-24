@@ -66,81 +66,62 @@ class ModelController extends Controller
         }
         
         $data=Yii::app()->request->getQuery('data');
+
+        $allelements["XMLSchemaEditorWidget.Model.extension"]["escapedName"]="xs\:extension";
+        $allelements["XMLSchemaEditorWidget.Model.extension_simpleContent"]["escapedname"]="";
+        $allelements["XMLSchemaEditorWidget.Model.extension_complexContent"]["escapedname"]="";
         
-       // Yii::app()->end();
+        $allelements["XMLSchemaEditorWidget.Model.restriction"]["escapedName"]="xs\:restriction";
+        $allelements["XMLSchemaEditorWidget.Model.restriction_simpleContent"]["escapedName"]="";
+        $allelements["XMLSchemaEditorWidget.Model.restriction_complexContent"]["escapedName"]="";
+        $allelements["XMLSchemaEditorWidget.Model.restriction_simpleType"]["escapedName"]="";
         
-        //if ($data==="elements") {
-        
-	        $allelements["XMLSchemaEditorWidget.Model.extension"]["escapedName"]="xs\:extension";
-	        $allelements["XMLSchemaEditorWidget.Model.extension_simpleContent"]["escapedname"]="";
-	        $allelements["XMLSchemaEditorWidget.Model.extension_complexContent"]["escapedname"]="";
-	        
-	        $allelements["XMLSchemaEditorWidget.Model.restriction"]["escapedName"]="xs\:restriction";
-	        $allelements["XMLSchemaEditorWidget.Model.restriction_simpleContent"]["escapedName"]="";
-	        $allelements["XMLSchemaEditorWidget.Model.restriction_complexContent"]["escapedName"]="";
-	        $allelements["XMLSchemaEditorWidget.Model.restriction_simpleType"]["escapedName"]="";
-	        
-	        $allelements["XMLSchemaEditorWidget.Model._length"]["escapedName"]="xs\:length";
-	        $allelements["XMLSchemaEditorWidget.Model._whiteSpace"]["escapedName"]="xs\:whiteSpace";
-	        
-	        //$allelements=json_encode($allelements);
-			
-			//$this->renderPartial('json',array('json'=>$allelements), false, true);
-	//	} else 
-	//	if ($data==="defaultvalues") {
+        $allelements["XMLSchemaEditorWidget.Model._length"]["escapedName"]="xs\:length";
+        $allelements["XMLSchemaEditorWidget.Model._whiteSpace"]["escapedName"]="xs\:whiteSpace";
+	
+		$attributesvalues=array();
 		
-			$attributesvalues=array();
+		$defaultvalues=Elementattributedefaultvalues::model()->findAllByAttributes(array('id_element'=>9,'id_attribute'=>31));
 			
-			$defaultvalues=Elementattributedefaultvalues::model()->findAllByAttributes(array('id_element'=>9,'id_attribute'=>31));
-				
-				$attributevalues=array();
-				for ($j = 0; $j != sizeof($defaultvalues); $j++){
-					$defaultattributevalue=Attributedefaultvalue::model()->findByAttributes(array('id'=>$defaultvalues[$j]['id_attributedefaultvalue']));
-					$attributevalues[]=$defaultattributevalue['name'];
-				}
-				
-			$attributesvalues['base']=$attributevalues;
-				
-			$alldefaultvalues['xs\:restriction']=$attributesvalues;
-			$alldefaultvalues['xs\:extension']=$attributesvalues;
+			$attributevalues=array();
+			for ($j = 0; $j != sizeof($defaultvalues); $j++){
+				$defaultattributevalue=Attributedefaultvalue::model()->findByAttributes(array('id'=>$defaultvalues[$j]['id_attributedefaultvalue']));
+				$attributevalues[]=$defaultattributevalue['name'];
+			}
 			
+		$attributesvalues['base']=$attributevalues;
+			
+		$alldefaultvalues['xs\:restriction']=$attributesvalues;
+		$alldefaultvalues['xs\:extension']=$attributesvalues;
 		
-			//$alldefaultvalues = json_encode($alldefaultvalues);
-			
-			$response=array();
-			$response['defaultvalues']=$alldefaultvalues;
-			$response['elements']=$allelements;
-			$response = json_encode($response);
-			
-			$this->renderPartial('json',array('json'=>$response), false, true);
-	//	}
+		$response=array();
+		$response['defaultvalues']=$alldefaultvalues;
+		$response['elements']=$allelements;
+		$response = json_encode($response);
+		
+		$this->renderPartial('json',array('json'=>$response), false, true);
+
 		Yii::app()->end();
 	}
-
-	// Uncomment the following methods and override them if needed
-	/*
+	
 	public function filters()
 	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
+	        return array(
+	                'accessControl',
+	        );
 	}
-
-	public function actions()
+	
+	public function accessRules()
 	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
+	        return array(
+	                array('allow',
+	                        'actions'=>array('get'),
+	                        'roles'=>array('user','administrator'),
+	                ),
+	       
+	                array('deny',
+	                        'users'=>array('*'),
+	                ),
+	        );
 	}
-	*/
 }

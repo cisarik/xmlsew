@@ -57,7 +57,7 @@ function showForgottenPassword() {
 }
 
 function showNewPassword(keychain) {
-	new Boxy("<form id='newpassword-form' action='index.php?r=site/newpassword' method='post'><center><p><b>Password:</b><br><input id='NewpasswordForm_password1' type='password' name='NewpasswordForm[password1]' size='20'/></p></center><center><p><b>Password (again):</b><br><input id='NewpasswordForm_password2' type='password' name='NewpasswordForm[password2]' size='20'/></p></center><div id='xmlsew_newpasswordalert' class='alert alert-block alert-error fade in'><h4 class='alert-heading'>Error</h4><p id='xmlsew_newpasswordalert_content'></div><input style='float:right;'type='submit' value='Send' /><input id='xmlsew_newpassword_cancel' style='float:left;'type='button' value='Cancel' /><input type='hidden' value='1' id='ajaxrequest' name='ajaxrequest'/><input type='hidden' value='"+keychain+"' id='keychain' name='keychain'/></form>", {
+	new Boxy("<form id='newpassword-form' action='index.php?r=site/newpassword' method='post'><center><p><b>Password:</b><br><input id='NewpasswordForm_password1' type='password' name='NewpasswordForm[password1]' size='20'/></p></center><center><p><b>Password (again):</b><br><input id='NewpasswordForm_password2' type='password' name='NewpasswordForm[password2]' size='20'/></p></center><div id='xmlsew_newpasswordalert' class='alert alert-block alert-error fade in'><h4 class='alert-heading'>Error</h4><p id='xmlsew_newpasswordalert_content'></div><input style='float:right;'type='submit' value='Submit' /><input id='xmlsew_newpassword_cancel' style='float:left;'type='button' value='Cancel' /><input type='hidden' value='1' id='ajaxrequest' name='ajaxrequest'/><input type='hidden' value='"+keychain+"' id='keychain' name='keychain'/></form>", {
 		title: "New password",
 		closeable: false,
 		})
@@ -85,7 +85,7 @@ function showNewPassword(keychain) {
 }
 
 function showChangePassword() {
-	new Boxy("<form id='newpassword-form' action='index.php?r=site/changepassword' method='post'><center><p><b>Password:</b><br><input id='NewpasswordForm_password1' type='password' name='NewpasswordForm[password1]' size='20'/></p></center><center><p><b>Password (again):</b><br><input id='NewpasswordForm_password2' type='password' name='NewpasswordForm[password2]' size='20'/></p></center><div id='xmlsew_changepasswordalert' class='alert alert-block alert-error fade in'><h4 class='alert-heading'>Error</h4><p id='xmlsew_changepasswordalert_content'></div><input style='float:right;'type='submit' value='Send' /><input id='xmlsew_changepassword_cancel' style='float:left;'type='button' value='Cancel' /><input type='hidden' value='1' id='ajaxrequest' name='ajaxrequest'/></form>", {
+	new Boxy("<form id='newpassword-form' action='index.php?r=site/changepassword' method='post'><center><p><b>Password:</b><br><input id='NewpasswordForm_password1' type='password' name='NewpasswordForm[password1]' size='20'/></p></center><center><p><b>Password (again):</b><br><input id='NewpasswordForm_password2' type='password' name='NewpasswordForm[password2]' size='20'/></p></center><div id='xmlsew_changepasswordalert' class='alert alert-block alert-error fade in'><h4 class='alert-heading'>Error</h4><p id='xmlsew_changepasswordalert_content'></div><input style='float:right;'type='submit' value='Submit' /><input id='xmlsew_changepassword_cancel' style='float:left;'type='button' value='Cancel' /><input type='hidden' value='1' id='ajaxrequest' name='ajaxrequest'/></form>", {
 		title: "Change password",
 		closeable: false,
 		})

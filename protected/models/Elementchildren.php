@@ -40,8 +40,8 @@ class Elementchildren extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_element, id_elementchildren', 'required'),
-			array('id_element, id_elementchildren', 'length', 'max'=>11),
+			array( 'id_elementchildren', 'required'),
+			array('id_elementchildren', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, id_element, id_elementchildren', 'safe', 'on'=>'search'),
@@ -92,4 +92,21 @@ class Elementchildren extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	function afterFind()
+	{
+		$childrenelements=Element::model()->findAllByAttributes(array('id'=>$this->id_elementchildren));
+		$childrenelementnames='';
+		for ($j = 0; $j != sizeof($childrenelements); $j++){
+			$childrenelementnames.=$childrenelements[$j]['name'].', ';
+		}
+		
+		$childrenelementnames=substr($childrenelementnames,0,-2);
+
+		$this->id_elementchildren = $childrenelementnames;
+		
+		return parent::afterFind();
+	}
+	
+	
 }

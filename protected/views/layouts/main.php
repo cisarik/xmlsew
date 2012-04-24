@@ -34,10 +34,8 @@
 					array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about'),'visible'=>!(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'Contact', 'url'=>array('/site/contact'),'visible'=>!(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'Users', 'url'=>array('/user'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
-					array('label'=>'Invitation', 'url'=>array('/site/invite'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
 					array('label'=>'Roles', 'url'=>array('/role'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
-					array('label'=>'Elements', 'url'=>array('/element'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
-					array('label'=>'Children Elements', 'url'=>array('/elementchildren'), 'visible'=>(Yii::app()->user->getModel()->role['name']=='administrator')),
+
 					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 				),));

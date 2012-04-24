@@ -64,6 +64,7 @@ return array(
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'Qc86U6qDB24bsgD',
+			//'password' => 'meteora',
 			'charset' => 'utf8',
 		),
 		

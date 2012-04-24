@@ -9,11 +9,6 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_role'); ?>
-		<?php echo $form->textField($model,'id_role'); ?>
-		<?php echo $form->error($model,'id_role'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>

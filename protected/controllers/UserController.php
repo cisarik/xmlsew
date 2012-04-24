@@ -26,14 +26,30 @@ class UserController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',
-				'actions'=>array('index','view','create','update','delete'),
-				'users'=>array('@'),
-			),
+		
+		array('allow',
+                'actions'=>array('invite','index','view','create','update','delete'),
+                'roles'=>array('user','administrator'),
+	        ),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+	}
+	
+	public function actionInvite()
+	{
+		$model=new InviteForm;
+		if(isset($_POST['InviteForm']))
+		{
+			$model->attributes=$_POST['InviteForm'];
+			if($model->validate() && $model->checkemails() && $model->sent())
+			{
+				Yii::app()->user->setFlash('invite','Invitations sent!');
+				$this->refresh();
+			}
+		}
+		$this->render('invite',array('model'=>$model));
 	}
 
 	/**
@@ -108,7 +124,7 @@ class UserController extends Controller
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');

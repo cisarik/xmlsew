@@ -461,10 +461,48 @@ XMLsew('XMLSchemaEditorWidget.Controller.UI',
 			} else {
 				system.xmlsewphp.slideUp('fast')
 			}
+			
 			system.xmlsewphptoggled=!system.xmlsewphptoggled
 		}))
 		
-		$navigationbar.append($.new$('a').attr('href','index.php?r=site/logout').text("Logout").css({'float':'right','color':'white','font-size':'15px','margin-right':'7px','margin-left':'10px'})).append($.new$('a').attr('href','index.php?r=site/admin').text("Administration").css({'float':'right','color':'white','font-size':'15px','margin-right':'7px','margin-left':'10px'})).append($.new$('a').attr('href','index.php?r=site/changepassword').text("Change password").css({'float':'right','color':'white','font-size':'15px','margin-right':'7px','margin-left':'10px'})).append($.new$('div').addClass('xmlsew_navigationbutton').append(
+		var $logoutbutton=$.new$('div').css('float','right').append($.new$('div').css({'float':'left','width':'3px','height':'23px'})).append($.new$('div').css({'height':'23px','float':'left'}).append($.new$('a').attr('href','index.php?r=site/logout').text("Logout").css({'cursor':'default','float':'left','color':'white','font-size':'15px','margin-right':'7px','margin-left':'10px'}).hover(
+		function(){
+		$(this).css('color','black')
+		$(this).parent().css('background-image','url("static/png/panelb_logout.png")')
+		$(this).parent().next().css('background-image','url("static/png/panel-right_logout.png")')
+		$(this).parent().prev().css('background-image','url("static/png/panel-left_logout.png")')},
+		function(){
+		$(this).css('color','white')
+		$(this).parent().css('background','black')
+		$(this).parent().next().css('background','black')
+		$(this).parent().prev().css('background','black')}
+		))).append($.new$('div').css({'float':'left','width':'3px','height':'23px'}))
+		
+		var $administrationbutton=$.new$('div').css('float','right').append($.new$('div').css({'float':'left','width':'3px','height':'23px'})).append($.new$('div').css({'height':'23px','float':'left'}).append($.new$('a').attr('href','index.php?r=site/admin').text("Administration").css({'cursor':'default','float':'left','color':'white','font-size':'15px','margin-right':'7px','margin-left':'10px'}).hover(
+		function(){
+		$(this).parent().css('background-image','url("static/png/panelb.png")')
+		$(this).parent().next().css('background-image','url("static/png/panel-right.png")')
+		$(this).parent().prev().css('background-image','url("static/png/panel-left.png")')},
+		function(){
+		$(this).parent().css('background','black')
+		$(this).parent().next().css('background','black')
+		$(this).parent().prev().css('background','black')}
+		))).append($.new$('div').css({'float':'left','width':'3px','height':'23px'}))		
+		
+				
+		var $changepasswordbutton=$.new$('div').css('float','right').append($.new$('div').css({'float':'left','width':'3px','height':'23px'})).append($.new$('div').css({'height':'23px','float':'left'}).append($.new$('a').attr('href','index.php?r=site/changepassword').text("Change password").css({'cursor':'default','float':'left','color':'white','font-size':'15px','margin-right':'7px','margin-left':'10px'}).hover(
+		function(){
+		$(this).parent().css('background-image','url("static/png/panelb.png")')
+		$(this).parent().next().css('background-image','url("static/png/panel-right.png")')
+		$(this).parent().prev().css('background-image','url("static/png/panel-left.png")')},
+		function(){
+		$(this).parent().css('background','black')
+		$(this).parent().next().css('background','black')
+		$(this).parent().prev().css('background','black')}
+		))).append($.new$('div').css({'float':'left','width':'3px','height':'23px'}))
+	
+	
+		$navigationbar.append($logoutbutton).append($administrationbutton).append($changepasswordbutton).append($.new$('div').addClass('xmlsew_navigationbutton').append(
 			$.new$('ul').addClass('dropdown').addClass('dropdown-horizontal').append(
 				$.new$('li').append(
 					$.new$('a').addClass('dir').text('Project')).append(
@@ -481,6 +519,13 @@ XMLsew('XMLSchemaEditorWidget.Controller.UI',
 					)
 					))).append(
 			$.new$('div').attr('id','xmlsew_ajaxloader').append($.new$('img').attr('src','static/gif/ajax-loader.gif').css('float','right')))
+			
+		$('#xmlsew_languages').selectBox('options',{'sk':'Slovenčina','cs':'Čeština','en':'English'}).change( function() {
+											
+												alert($(this).val())
+	
+											})
+		//$('#xmlsew_languages').width(30)
 				
 				
 		var $newfilemodal=$.new$('div').addClass('modal').addClass('fade').attr('id','xmlsew_newfilemodal')

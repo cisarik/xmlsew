@@ -1,14 +1,14 @@
-<?php $this->pageTitle=Yii::app()->name; ?>
+<?php $this->pageTitle=Yii::app()->name; 
+$this->breadcrumbs=array(
+	'Home',
+);
+?>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<p>Welcome to XML Schema Editor administration</p>
 
-<p>You may change the content of this page by modifying the following two files:</p>
+<p>Administrator can manage users and their roles here. However you access (even without login) these functions: </p>
 <ul>
-	<li>View file: <tt><?php echo __FILE__; ?></tt></li>
-	<li>Layout file: <tt><?php echo $this->getLayoutFile('main'); ?></tt></li>
+	<li>About: Learn more about XML Schema Editor</li>
+	<li>Contact: Feel free to contact us</li>
 </ul>
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>

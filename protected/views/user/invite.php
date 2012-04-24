@@ -1,7 +1,14 @@
 <?php
 $this->pageTitle=Yii::app()->name . ' - Invite users';
 $this->breadcrumbs=array(
+'Users'=>array('index'),
 	'Invite',
+);
+
+$this->menu=array(
+	array('label'=>'Invite Users', 'url'=>array('invite')),
+	array('label'=>'Create User', 'url'=>array('create')),
+	array('label'=>'Manage Users', 'url'=>array('index')),
 );
 ?>
 
