@@ -93,20 +93,5 @@ class Elementchildren extends CActiveRecord
 		));
 	}
 	
-	function afterFind()
-	{
-		$childrenelements=Element::model()->findAllByAttributes(array('id'=>$this->id_elementchildren));
-		$childrenelementnames='';
-		for ($j = 0; $j != sizeof($childrenelements); $j++){
-			$childrenelementnames.=$childrenelements[$j]['name'].', ';
-		}
-		
-		$childrenelementnames=substr($childrenelementnames,0,-2);
-
-		$this->id_elementchildren = $childrenelementnames;
-		
-		return parent::afterFind();
-	}
-	
 	
 }
