@@ -150,7 +150,6 @@ XMLsew('XMLSchemaEditorWidget.Controller.UI',
 					
 					rawproject[system.openedprojectname]=rawxmls
 
-					console.log(rawproject)
 					new XMLSchemaEditorWidget.Controller.Ajax().postJSON('index.php?r=filesystem/saveproject','project',rawproject,
 					function(data){
 						$('#xmlsew_filesavedmodal').modal('show')
@@ -178,7 +177,7 @@ XMLsew('XMLSchemaEditorWidget.Controller.UI',
 					$('#openenedprojectmenu').remove()
 					system.openedproject=false
 					system.openedschemas={}
-
+					system.loadProjects()
 				})
 			))
 		})
@@ -362,7 +361,6 @@ XMLsew('XMLSchemaEditorWidget.Controller.UI',
 				XMLSchemaEditorWidget.Model.XMLSchemaElement.parsedJSON=response['elements']
 				
 				$.each(XMLSchemaEditorWidget.Model.XMLSchemaElement.parsedJSON, function(key, val) {
-					//console.log(key+':'+val['children'])
 		    		XMLSchemaEditorWidget.Model.XMLSchemaElement(key,val,{})
 		  		})
 		})

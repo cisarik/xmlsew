@@ -20,9 +20,7 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
-		'ajaxAuth',
-		
+
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'meteora',
@@ -40,22 +38,10 @@ return array(
 			
 			'class' => 'WebUser',
 		),
-		// uncomment the following to enable URLs in path-format
 		
-		/*
-		'urlManager'=>array(
-			'urlFormat'=>'path',
-			'rules'=>array(
-				'site/index' => 'site/index',
-				'site/admin' => 'site/admin',
-				//'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				//'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				//'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
+		'cache'=>array(
+        	'class'=>'CFileCache',
 		),
-		
-		*/
-		
 
 		// uncomment the following to use a MySQL database
 		
